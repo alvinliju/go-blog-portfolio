@@ -1,0 +1,57 @@
+{{define "content"}}
+<main class="max-w-md mx-auto px-4 py-8">
+  <!-- Hero Section -->
+  <section class="text-center mb-16">
+    <div class="flex flex-col text-start">
+        <p class="font-semibold pb-2">Hey, my name is Alvin aka l3mon.</p>
+        
+        <p class="text-gray-700">I'm a 19-year-old cybersecurity enthusiast who loves CTFs and is diving into CS fundamentals.
+            Currently focused on C programming and exploring computer science from first principles.
+            Previously worked in web3 and go-development, but now building a deeper technical foundation.
+            This blog tracks my journey and keeps my ADHD brain accountable!</p>
+        
+    </div>
+  </section>
+
+  <section class="flex flex-col gap-6">
+    <h2 class="text-2xl font-semibold">Latest Posts</h2>
+    <div class="posts-grid">
+        <div class="empty-posts">
+            <p>No posts yet. Check back soon!</p>
+            <p class="text-sm text-gray-500">// First post coming soon...</p>
+        </div>
+
+    </div>
+
+    <div class="">
+        <a class="text-gray-500 onhover:cursor-pointer hover:underline decoration-black-500" href="/blogs" class="button">View All Posts</a>
+    </div>
+</section>
+
+<section class="mt-16">
+    <h2 class="text-2xl font-semibold mb-6">Focus Areas</h2>
+    <div class="focus-grid flex flex-col gap-6">
+        <div class="focus-card">
+            <div class="focus-icon">🔐</div>
+            <h3>Cybersecurity</h3>
+            <p>Exploring vulnerabilities, security fundamentals, and ethical hacking techniques.</p>
+        </div>
+        <div class="focus-card">
+            <div class="focus-icon">🏁</div>
+            <h3>CTF Challenges</h3>
+            <p>Solving and documenting capture-the-flag challenges from various competitions.</p>
+        </div>
+        <div class="focus-card">
+            <div class="focus-icon">📚</div>
+            <h3>CS Fundamentals</h3>
+            <p>Learning computer science from first principles like the OGs.</p>
+        </div>
+        <div class="focus-card">
+            <div class="focus-icon">⚡</div>
+            <h3>Low-Level Programming</h3>
+            <p>Diving into C and systems programming to understand what happens under the hood.</p>
+        </div>
+    </div>
+</section>
+</main>
+{{end}}
