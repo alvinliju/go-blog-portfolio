@@ -24,7 +24,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "home.html", "layout.html", nil)
 }
 
-func fetchAllBlogs(w http.ResponseWriter, r *http.Request){
+func fetchAllBlogs(w http.ResponseWriter, r *http.Request) {
 
 }
 
