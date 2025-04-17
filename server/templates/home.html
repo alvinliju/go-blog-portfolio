@@ -1,11 +1,14 @@
 {{define "content"}}
-<main class="max-w-md mx-auto px-4 py-8">
+<main class="max-w-lg mx-auto px-4 py-8">
   <!-- Hero Section -->
-  <section class="text-center mb-16">
+  <section class="mb-16">
     <div class="flex flex-col text-start">
-        <p class="font-semibold pb-2">Hey, my name is Alvin aka l3mon.</p>
+        <div class="inline-flex items-center mb-3">
+            <span class="font-mono text-sm mr-2 text-green-600">></span>
+            <p class="font-semibold">Hey, my name is Alvin aka l3mon.</p>
+        </div>
         
-        <p class="text-gray-700">I'm a 19-year-old cybersecurity enthusiast who loves CTFs and is diving into CS fundamentals.
+        <p class="text-gray-700 leading-relaxed">I'm a 19-year-old cybersecurity enthusiast who loves CTFs and is diving into CS fundamentals.
             Currently focused on C programming and exploring computer science from first principles.
             Previously worked in web3 and go-development, but now building a deeper technical foundation.
             This blog tracks my journey and keeps my ADHD brain accountable!</p>
@@ -14,44 +17,84 @@
   </section>
 
   <section class="flex flex-col gap-6">
-    <h2 class="text-2xl font-semibold">Latest Posts</h2>
+    <div class="flex items-center">
+        <h2 class="text-2xl font-semibold">Latest Posts</h2>
+        <div class="ml-2 h-1 w-1 rounded-full bg-red-500 animate-pulse"></div>
+    </div>
     <div class="posts-grid">
-        <div class="empty-posts">
+        <div class="empty-posts border border-dashed border-gray-300 rounded p-6 bg-gray-50">
             <p>No posts yet. Check back soon!</p>
-            <p class="text-sm text-gray-500">// First post coming soon...</p>
+            <p class="text-sm text-gray-500 font-mono">// First post coming soon...</p>
         </div>
-
     </div>
 
     <div class="">
-        <a class="text-gray-500 onhover:cursor-pointer hover:underline decoration-black-500" href="/blogs" class="button">View All Posts</a>
+        <a class="text-gray-500 font-mono text-sm hover:text-green-600 transition-colors" href="/blogs">cd /blogs</a>
     </div>
 </section>
 
 <section class="mt-16">
     <h2 class="text-2xl font-semibold mb-6">Focus Areas</h2>
     <div class="focus-grid flex flex-col gap-6">
-        <div class="focus-card">
-            <div class="focus-icon">🔐</div>
-            <h3>Cybersecurity</h3>
-            <p>Exploring vulnerabilities, security fundamentals, and ethical hacking techniques.</p>
+        <div class="focus-card border-l-2 border-green-600 pl-3 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center mb-2">
+                <div class="focus-icon">🔐</div>
+                <h3 class="ml-2 font-semibold">Cybersecurity</h3>
+            </div>
+            <p class="text-gray-700">Exploring vulnerabilities, security fundamentals, and ethical hacking techniques.</p>
         </div>
-        <div class="focus-card">
-            <div class="focus-icon">🏁</div>
-            <h3>CTF Challenges</h3>
-            <p>Solving and documenting capture-the-flag challenges from various competitions.</p>
+        <div class="focus-card border-l-2 border-green-600 pl-3 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center mb-2">
+                <div class="focus-icon">🏁</div>
+                <h3 class="ml-2 font-semibold">CTF Challenges</h3>
+            </div>
+            <p class="text-gray-700">Solving and documenting capture-the-flag challenges from various competitions.</p>
         </div>
-        <div class="focus-card">
-            <div class="focus-icon">📚</div>
-            <h3>CS Fundamentals</h3>
-            <p>Learning computer science from first principles like the OGs.</p>
+        <div class="focus-card border-l-2 border-green-600 pl-3 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center mb-2">
+                <div class="focus-icon">📚</div>
+                <h3 class="ml-2 font-semibold">CS Fundamentals</h3>
+            </div>
+            <p class="text-gray-700">Learning computer science from first principles like the OGs.</p>
         </div>
-        <div class="focus-card">
-            <div class="focus-icon">⚡</div>
-            <h3>Low-Level Programming</h3>
-            <p>Diving into C and systems programming to understand what happens under the hood.</p>
+        <div class="focus-card border-l-2 border-green-600 pl-3 hover:bg-gray-50 transition-colors">
+            <div class="flex items-center mb-2">
+                <div class="focus-icon">⚡</div>
+                <h3 class="ml-2 font-semibold">Low-Level Programming</h3>
+            </div>
+            <p class="text-gray-700">Diving into C and systems programming to understand what happens under the hood.</p>
         </div>
     </div>
 </section>
+
+<footer class="mt-16 pt-6 border-t border-gray-200">
+    <div class="flex justify-between items-center">
+        <p class="text-xs text-gray-500 font-mono">l3mon@ubuntu:~$ <span class="animate-pulse">_</span></p>
+        <p class="text-xs text-gray-500">// Last updated: April 2025</p>
+    </div>
+</footer>
 </main>
 {{end}}
+
+<!-- Include this in your head section -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap');
+    
+    .font-mono {
+      font-family: 'Space Mono', monospace;
+    }
+    
+    .focus-card {
+      position: relative;
+      transition: all 0.2s ease;
+    }
+    
+    .empty-posts {
+      background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%), 
+                        linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.02) 75%), 
+                        linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.02) 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+</style>

@@ -9,7 +9,8 @@ import (
 
 func main() {
 	http.HandleFunc("/", home)
-	http.HandleFunc("/blogs", fetchAllBlogs)
+	http.HandleFunc("/about", about)
+	http.HandleFunc("/war-logs", warlogs)
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./static/css"))))
 
 	fmt.Println("🚀 Server running on http://localhost:8080")
@@ -24,8 +25,12 @@ func home(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "home.html", "layout.html", nil)
 }
 
-func fetchAllBlogs(w http.ResponseWriter, r *http.Request) {
+func about(w http.ResponseWriter, r *http.Request) {
+	renderTemplate(w, "about.html", "layout.html", nil)
+}
 
+func warlogs(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "war-logs.md")
 }
 
 func renderTemplate(w http.ResponseWriter, contentTempl string, layoutTmpl string, data interface{}) {

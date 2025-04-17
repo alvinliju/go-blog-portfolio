@@ -1,0 +1,170 @@
+{{define "content"}}
+<main class="max-w-lg mx-auto px-4 py-8">
+  <!-- About Header -->
+  <section class="mb-12">
+    <div class="flex items-center mb-4">
+      <h1 class="text-2xl font-semibold">About</h1>
+      <div class="ml-2 h-1 w-1 rounded-full bg-red-500 animate-pulse"></div>
+    </div>
+    
+    <div class="flex flex-col text-start">
+      <div class="inline-flex items-center mb-3">
+        <span class="font-mono text-sm mr-2 text-green-600">></span>
+        <p class="font-semibold">whoami</p>
+      </div>
+      
+      <p class="text-gray-700 leading-relaxed mb-6">
+        My name is Alvin, but online I go by l3mon. I'm a 19-year-old cybersecurity enthusiast and CS student. 
+        This site documents my journey learning security concepts, low-level programming, and computer science fundamentals.
+      </p>
+      
+      <div class="border-l-2 border-green-600 pl-3 py-1 my-4 font-mono text-sm text-gray-600">
+        $ cat /etc/motd<br>
+        "Understanding how things work underneath the abstractions is the key to true mastery."
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="mb-12">
+    <h2 class="text-xl font-semibold mb-4">Bio</h2>
+    
+    <div class="space-y-6">
+      <div class="border-l-2 border-gray-200 pl-3 hover:border-green-600 transition-colors">
+        <div class="font-mono text-xs text-gray-500 mb-1">2024 - Present</div>
+        <h3 class="font-semibold">CS Student & Security Researcher</h3>
+        <p class="text-gray-700 text-sm">Studying computer science fundamentals and participating in CTF competitions. Learning C programming and exploring systems from first principles.</p>
+      </div>
+      
+      <div class="border-l-2 border-gray-200 pl-3 hover:border-green-600 transition-colors">
+        <div class="font-mono text-xs text-gray-500 mb-1">2023 - 2024</div>
+        <h3 class="font-semibold">Started my journey</h3>
+        <p class="text-gray-700 text-sm">Started learning about nodejs and building webapps with js. Joined a bootcamp but soon realised i dont want to learn just "enough" to land a job, man i was 18 i dont need no job as a kid i truly wanted to learn cybersecurity and how computers work generally..</p>
+      </div>
+     
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="mb-12">
+    <h2 class="text-xl font-semibold mb-4">Skills & Tools</h2>
+    
+    <div class="grid grid-cols-2 gap-4">
+      <div class="border border-gray-200 p-3 hover:bg-gray-50 transition-colors">
+        <h3 class="font-mono text-sm font-semibold text-green-600 mb-2">Languages</h3>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>C/C++</li>
+          <li>Go</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Assembly (learning)</li>
+        </ul>
+      </div>
+      
+      <div class="border border-gray-200 p-3 hover:bg-gray-50 transition-colors">
+        <h3 class="font-mono text-sm font-semibold text-green-600 mb-2">Security</h3>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>Binary Analysis</li>
+          <li>Reverse Engineering</li>
+          <li>Web Security</li>
+          <li>Network Security</li>
+          <li>CTF Challenges</li>
+        </ul>
+      </div>
+      
+      <div class="border border-gray-200 p-3 hover:bg-gray-50 transition-colors">
+        <h3 class="font-mono text-sm font-semibold text-green-600 mb-2">Tools</h3>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>GDB</li>
+          <li>Ghidra</li>
+          <li>Wireshark</li>
+          <li>Burp Suite</li>
+          <li>Linux</li>
+        </ul>
+      </div>
+      
+      <div class="border border-gray-200 p-3 hover:bg-gray-50 transition-colors">
+        <h3 class="font-mono text-sm font-semibold text-green-600 mb-2">Interests</h3>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>OS Development</li>
+          <li>Compiler Design</li>
+          <li>Computer Architecture</li>
+          <li>Cryptography</li>
+          <li>Retro Computing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Focus -->
+  <section class="mb-12">
+    <h2 class="text-xl font-semibold mb-4">Current Focus</h2>
+    
+    <div class="border border-dashed border-gray-300 rounded p-4 bg-gray-50">
+      <div class="empty-posts">
+        <div class="font-mono text-sm mb-3 text-green-600">$ ./current_project</div>
+        <h3 class="font-semibold mb-2">Learning cs from first principles</h3>
+        <p class="text-gray-700 text-sm mb-4">I'm currently learning c programming and implementing data structures from scratch with c lang to understand how things work under the hood.</p>
+        
+        <div class="text-xs text-gray-500 font-mono border-t border-gray-200 pt-2">
+          <div>Progress: [██░░░░░░░] 20%</div>
+          <div>Last commit: 1 days ago</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="mb-8">
+    <h2 class="text-xl font-semibold mb-4">Connect</h2>
+    
+    <div class="space-y-3">
+      <div class="flex items-center">
+        <div class="w-6 text-center">
+          <span class="text-gray-500">✉️</span>
+        </div>
+        <a href="mailto:alvinliju44@gmail.com" class="ml-3 text-gray-700 hover:text-green-600 transition-colors">alvinliju44@gmail.com</a>
+      </div>
+      
+      <div class="flex items-center">
+        <div class="w-6 text-center">
+          <span class="text-gray-500">🐙</span>
+        </div>
+        <a href="https://github.com/alvinliju" class="ml-3 text-gray-700 hover:text-green-600 transition-colors">github.com/alvinliju</a>
+      </div>
+      
+      <div class="flex items-center">
+        <div class="w-6 text-center">
+          <span class="text-gray-500">🐦</span>
+        </div>
+        <a href="https://twitter.com/e3he0" class="ml-3 text-gray-700 hover:text-green-600 transition-colors">@e3he0</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-16 pt-6 border-t border-gray-200">
+    <div class="flex justify-between items-center">
+        <p class="text-xs text-gray-500 font-mono">l3mon@tsubiclub:~$ <span class="animate-pulse">_</span></p>
+        <a href="/" class="text-xs text-gray-500 font-mono hover:text-green-600 transition-colors">cd /home</a>
+    </div>
+  </footer>
+</main>
+{{end}}
+
+<!-- Include this in your head section -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap');
+    
+    .font-mono {
+      font-family: 'Space Mono', monospace;
+    }
+    
+    .empty-posts {
+      background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%), 
+                        linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.02) 75%), 
+                        linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.02) 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+</style>
